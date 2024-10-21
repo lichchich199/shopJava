@@ -1,5 +1,0 @@
-package DiamonShop.Dto;
-
-public class PaginationDto {
-
-}

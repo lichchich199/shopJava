@@ -1,9 +1,0 @@
-package DiamonShop.Entity;
-
-public class Menus {
-	private int id;
-	private String name;
-	private String url;
-	
-	
-}

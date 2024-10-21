@@ -1,7 +1,0 @@
-package DiamonShop.Service.User;
-
-import DiamonShop.Dto.PaginationDto;
-
-public interface PaginationService {
-	public PaginationDto getPaginationInfo(int totalData, int limit, int currentPage);
-}

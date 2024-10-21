@@ -1,6 +1,0 @@
-0:0:0:0:0:0:0:1 - - [06/Oct/2024:20:40:25 +0700] "GET /DiamonShop/ HTTP/1.1" 200 21846
-0:0:0:0:0:0:0:1 - - [06/Oct/2024:20:40:25 +0700] "GET /DiamonShop/assets/user/assets/img/white_leather.png HTTP/1.1" 404 967
-0:0:0:0:0:0:0:1 - - [06/Oct/2024:20:40:25 +0700] "GET /DiamonShop/assets/user/assets/img/new.png HTTP/1.1" 404 967
-0:0:0:0:0:0:0:1 - - [06/Oct/2024:20:41:33 +0700] "GET /DiamonShop/ HTTP/1.1" 200 21858
-0:0:0:0:0:0:0:1 - - [06/Oct/2024:20:44:12 +0700] "GET /DiamonShop/ HTTP/1.1" 200 20956
-0:0:0:0:0:0:0:1 - - [06/Oct/2024:20:44:54 +0700] "GET /DiamonShop/ HTTP/1.1" 200 20956
