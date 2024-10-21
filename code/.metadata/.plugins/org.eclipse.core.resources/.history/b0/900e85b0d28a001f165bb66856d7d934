@@ -1,0 +1,41 @@
+package DiamonShop.Dao;
+
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import DiamonShop.Dto.ProductsDto;
+import DiamonShop.Entity.CartDto;
+
+public class CartDao extends BaseDao{
+	@Autowired
+	ProductsDao productsDao;
+	
+	public HashMap<String, CartDto> addCart(String productId, HashMap<String, CartDto> cart) {
+		CartDto itemCart = new CartDto();
+		
+		ProductsDto productsDto = productsDao.getProductByID(productId);
+		
+		if(productsDto != null) {
+			itemCart.setProduct(productsDto);
+			itemCart.setQuantity(1);
+			itemCart.setTotalPrice(productsDto.getPrice());
+		}
+		cart.put(productId, itemCart);
+		
+		return cart;
+	}
+	
+	public HashMap<String, CartDto> editCart(String productId, int quantity, HashMap<String, CartDto> cart) {
+		CartDto itemCart = new CartDto();
+		if(cart.containsKey(productId)) {
+			itemCart = cart.get(productId);
+			itemCart.setQuantity(quantity);
+			itemCart.setTotalPrice(itemCart.getProduct().getPrice() * quantity);
+		}
+		cart.put(productId, itemCart);
+		
+		return cart;
+		
+	}
+}

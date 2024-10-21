@@ -1,0 +1,9 @@
+package DiamonShop.Service.User;
+
+import java.util.List;
+
+import DiamonShop.Entity.Slides;
+
+public interface IHomeService {
+	public List<Slides> GetDataSlide();
+}

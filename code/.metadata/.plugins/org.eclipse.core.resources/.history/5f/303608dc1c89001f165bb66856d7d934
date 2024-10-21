@@ -1,0 +1,21 @@
+package DiamonShop.Service.User;
+
+import DiamonShop.Dto.PaginationDto;
+
+public class PaginationServiceImpl implements IPaginationService{
+
+	public PaginationDto getDataByPagination(int totalData, int limit, int currentPage) {
+		PaginationDto paginationDto = new PaginationDto();
+		
+		paginationDto.setLimit(limit);
+		paginationDto.setTotalPage(getTotalPage(totalData, limit));
+		
+		
+		return null;
+	}
+
+	private int getTotalPage(int totalData, int limit) {
+		return totalData % limit == 0 ? totalData/limit : totalData/limit + 1;
+	}
+
+}

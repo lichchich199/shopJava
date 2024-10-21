@@ -1,0 +1,41 @@
+package DiamonShop.Service.User;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import DiamonShop.Dao.CategoriesDao;
+import DiamonShop.Dao.MenusDao;
+import DiamonShop.Dao.SlidesDao;
+import DiamonShop.Entity.Categories;
+import DiamonShop.Entity.Menus;
+import DiamonShop.Entity.Slides;
+
+@Service
+public class HomeServiceImpl implements IHomeService{
+	@Autowired
+	private MenusDao menusDao;
+	
+	@Autowired
+	private SlidesDao slidesDao;
+	
+	@Autowired
+	private CategoriesDao categoriesDao;
+	
+	public List<Menus> getDataMenu() {
+		return menusDao.getDataMenu();
+	}
+	
+	public List<Slides> getDataSlide() {
+		return slidesDao.getDataSlice();
+	}
+
+
+	public List<Categories> getCategories() {
+		return categoriesDao.getDataCategory();
+	}
+
+
+
+}

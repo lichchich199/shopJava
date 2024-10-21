@@ -1,0 +1,19 @@
+package DiamonShop.Service.User;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import DiamonShop.Dao.SlidesDao;
+import DiamonShop.Entity.Slides;
+
+public class HomeServiceImpl implements IHome{
+	@Autowired
+	private SlidesDao slidesDao;
+	
+	
+	public List<Slides> GetDataSlide() {
+		return slidesDao.GetDataSlice();
+	}
+
+}

@@ -1,0 +1,13 @@
+package DiamonShop.Service.User;
+
+import DiamonShop.Dto.ProductsDto;
+
+public class ProductServiceImpl implements ProductService{
+
+	public ProductsDto getProductById(String idProduct) {
+		ProductsDto product = new ProductsDto();
+		// TODO Auto-generated method stub
+		return product;
+	}
+
+}

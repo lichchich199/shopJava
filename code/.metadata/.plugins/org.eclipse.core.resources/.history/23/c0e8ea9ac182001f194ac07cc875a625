@@ -1,0 +1,25 @@
+package DiamonShop.Dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import DiamonShop.Entity.MapperSlices;
+import DiamonShop.Entity.Slices;
+
+@Repository
+public class HomeDao {
+	@Autowired
+	public JdbcTemplate _jdbcTemplate;
+	public List<Slices> GetDataSlice() {
+		List<Slices> list = new ArrayList<Slices>();
+		
+		String sql = "SELECT * FROM slices";
+		list = _jdbcTemplate.query(sql, new MapperSlices());
+		
+		return list;
+	}
+}
